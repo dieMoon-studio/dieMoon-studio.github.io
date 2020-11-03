@@ -1,0 +1,3100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Савченко Андрей</title>
+		<style>
+			td{border:0px;}
+			.header{position:fixed;
+				background-color:#f0fcfc;
+				padding:10px;
+				border:3px outset black;
+				right:2px
+			}
+			li{font-size:30px;}
+			body{background-image:url("backgraund/minecraft.JPG");
+				background-attachment:fixed;
+			}
+			
+			@font-face{font-family:PerfectDOSVGA437;
+				src: url(fonts/PerfectDOSVGA437.ttf);
+			}
+			body{color:white;font-family:PerfectDOSVGA437;
+			font-size:30px
+			}
+			b{color:black;font-size:30px;}
+			#white,#black,#treasure{font-family:PerfectDOSVGA437;font-size:30px;}
+			h1{text-align:  center;}
+			#scotch{background-color:#4d4d4d;padding:10px;}
+			#cop{font-size:15px;color:black;}
+		</style>
+	</head>
+	<body>
+		<audio src="music/music.mp3" autoplay="autoplay"></audio>
+		<img src="items/digger.PNG" id="digger"/>
+		<button id="dice">+25 жизней</button>
+		<div class="header">
+			<b id="live">100/100 </b><img src="dirt/heart.PNG"width="25px"height="25px"/>
+			<b id="cash">0</b><img src="dirt/money.GIF" width="30px" height="30px"/>
+			<button id="white"> белая </button>  <button id="black"> темная </button> <button id="treasure"> игровая </button>
+		</div>
+		
+		<h1>Правила игры:</h1>
+		<ul>
+			<li>
+				Вы должны копать землю и искать клад.
+				</br>
+				Но у каждого вида блока есть своя прочность
+			</li>
+			<br/>
+			<li><img src="dirt/grass.PNG" width="30px"height="30px"/>-Теряется у лопаты 1 единица прочности,но найти что-то ценное почти не возможно</li>
+			<li><img src="dirt/graund.PNG" width="30px"height="30px"/>-Tеряется у лопаты 5 единиц прочности,но найти что-то будет полегче</li>
+			<li><img src="dirt/sandstone.PNG" width="30px"height="30px"/>-Теряется у лопаты 10 единиц прочности,но найти что-то не составит труда</li>
+			<li><img src="dirt/stone.PNG" width="30px"height="30px"/>-Теряется у лопаты 20 единиц прочности,но здесь водятся алмазы</li>
+			<li><img src="dirt/bedrock.JPG" width="30px"height="30px"/>-Теряется у лопаты 50 единиц прочности,но можно сорвать куш</li>
+			<li><img src="items/many_coins.PNG" width="30px"height="30px"/>+10 монет</li>
+			<li><img src="items/coins.GIF" width="30px"height="30px"/>+25 монет</li>
+			<li><img src="items/diamond.PNG" width="30px"height="30px"/>+75 монет</li>
+			<li><img src="items/fall.GIF" width="30px"height="30px"/>+200 монет</li>
+			<li><img src="dirt/heart.PNG" width="30px"height="30px"/>+5-100 жизней</li>
+		</ul>
+		<br/>
+		<br/>
+		<hr/>
+		<table>
+			<tbody>
+				<tr class="1">
+					<td><button id="grass" ><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="grass1"><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="grass2"><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="grass3"><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="grass4"><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="grass5"><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="grass6"><img src="dirt/grass.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr class="2">
+					<td><button id="graund"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund1"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund2"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund3"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund4"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund5"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund6"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+				</tr >
+				<tr class="2">
+					<td><button id="graund7"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund8"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund9"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund10"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund11"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund12"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund13"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr class="2">
+					<td><button id="graund14"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund15"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund16"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund17"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund18"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund19"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="graund20"><img src="dirt/graund.PNG" width="240px" height="240px"/></button></td>
+					
+				</tr>
+				<tr class="3">
+					<td><button id="sandstone"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone1"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone2"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone3"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone4"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone5"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone6"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="sandstone7"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone8"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone9"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone10"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone11"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone12"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone13"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="sandstone14"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone15"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone16"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone17"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone18"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone19"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="sandstone20"><img src="dirt/sandstone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="stone"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone1"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone2"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone3"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone4"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone5"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone6"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="stone7"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone8"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone9"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone10"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone11"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone12"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone13"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="stone14"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone15"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone16"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone17"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone18"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone19"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone20"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="stone21"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone22"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone23"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone24"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone25"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone26"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+					<td><button id="stone27"><img src="dirt/stone.PNG" width="240px" height="240px"/></button></td>
+				</tr>
+				<tr>
+					<td><button id="bedrock"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+					<td><button id="bedrock1"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+					<td><button id="bedrock2"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+					<td><button id="bedrock3"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+					<td><button id="bedrock4"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+					<td><button id="bedrock5"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+					<td><button id="bedrock6"><img src="dirt/bedrock.JPG" width="240px" height="240px"/></button></td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<br/>
+		<hr/>
+		<h1>Магазин</h1>
+		<img src="items/ducTape.PNG"/>
+		<br/>
+		<p id="scotch">
+			Востанавливает 50HP
+			<br/>
+			<button id="ducTape">25 монет</button>
+		</p>
+		<b id="cop">© DieMoon studio 2020 1.0.1</b>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js">    </script>
+		<script>
+			/*
+				$("body").mousemove(function(coordinate){
+					var x=(coordinate.pageX);
+					var y=(coordinate.pageY);
+					$("#digger").offset({left:x,top:y});
+				});
+				без этого потому что ничего не отвечает
+			*/
+			//Темы
+			
+			$("#white").click(function(){
+				$("body").css({"background-image":"url('backgraund/white.JPG')","color":"black"});
+			})
+			$("#black").click(function(){
+				$("body").css({"background-image":"url('backgraund/black.JPG')","color":"white"});
+			})
+			$("#treasure").click(function(){
+				$("body").css({"background-image":"url('backgraund/minecraft.JPG')","color":"white"});
+			})
+			//Конец тем
+			//Копание
+			var minus=0;
+			var cash=0;
+			var lives=100;
+			var nahodka="";
+			var green=["0","0","0","0","0","0","1","5"];
+			$("#grass").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#grass1").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass1").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass1").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass1").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#grass2").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass2").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass2").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass2").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#grass3").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass3").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass3").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass3").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#grass4").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass4").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass4").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass4").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#grass5").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass5").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass5").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass5").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#grass6").click(function(){
+				random=Math.floor(Math.random()*green.length);
+				nahodka=green[random]
+				lives--;
+				if (nahodka=="0"){
+					$("#grass6").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#grass6").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#grass6").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+5;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			var graund=["0","0","0","0","1","5"];
+			$("#graund").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund1").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund1").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund1").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund1").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund2").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund2").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund2").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund2").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund3").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund3").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund3").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund3").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund4").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund4").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund4").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund4").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund5").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund5").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund5").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund5").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund6").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund6").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund6").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund6").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund7").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund7").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund7").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund7").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund8").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund8").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund8").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund8").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund9").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund9").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund9").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund9").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund10").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund10").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund10").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund10").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund11").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund11").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund11").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund11").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund12").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund12").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund12").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund12").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund13").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund13").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund13").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund13").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund14").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund14").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund14").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund14").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund15").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund15").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund15").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund15").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund16").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund16").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund16").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund16").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund17").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund17").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund17").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund17").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund18").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund18").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund18").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund18").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund19").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund19").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund19").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund19").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#graund20").click(function(){
+				random=Math.floor(Math.random()*graund.length);
+				nahodka=graund[random]
+				lives=lives-5;
+				if (nahodka=="0"){
+					$("#graund20").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#graund20").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#graund20").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+10;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			var sandrock=["0","0","0","0","1","2","5"];
+			$("#sandstone").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10;
+				if (nahodka=="0"){
+					$("#sandstone").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone1").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone1").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone1").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone1").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone1").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone2").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone2").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone2").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone2").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone2").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone3").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone3").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone3").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone3").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone3").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone4").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone4").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone4").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone4").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone4").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone5").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone5").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone5").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone5").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone5").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone6").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone6").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone6").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone6").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone6").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone7").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone7").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone7").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone7").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone7").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone8").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone8").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone8").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone8").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone8").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone9").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone9").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone9").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone9").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone9").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone10").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone10").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone10").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone10").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone10").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone11").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone11").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone11").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone11").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone11").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone12").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone12").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone12").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone12").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone12").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+			});
+				$("#sandstone13").click(function(){
+					random=Math.floor(Math.random()*sandrock.length);
+					nahodka=sandrock[random]
+					lives=lives-10
+					if (nahodka=="0"){
+						$("#sandstone13").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+					}
+					else if (nahodka=="1"){
+						$("#sandstone13").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+						cash=cash+10;
+						$("#cash").text(cash);
+					}
+					else if (nahodka=="2"){
+						$("#sandstone13").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+						cash=cash+25;
+						$("#cash").text(cash);
+					}
+					else if (nahodka=="5"){
+						$("#sandstone13").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+						lives=lives+20;
+						if (lives>100){
+							minus=lives-101;
+							lives=lives-minus;
+							$("#live").text(lives+"/100")
+						};
+					};
+					
+					$("#live").text(lives+"/100")
+					if (lives<=0){
+						alert("вы проиграли")
+						window.location.reload(true);
+					};
+			});	
+			$("#sandstone14").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+					nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone14").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone14").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone14").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone14").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone15").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone15").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone15").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone15").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone15").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone16").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone16").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone16").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone16").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone16").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone17").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone17").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone17").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone17").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone17").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone18").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone18").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone18").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone18").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone18").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone19").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone19").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone19").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone19").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone19").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#sandstone20").click(function(){
+				random=Math.floor(Math.random()*sandrock.length);
+				nahodka=sandrock[random]
+				lives=lives-10
+				if (nahodka=="0"){
+					$("#sandstone20").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#sandstone20").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#sandstone20").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#sandstone20").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+20;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			var rock=["0","0","0","0","1","2","3","5"]
+			$("#stone").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone1").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone1").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone1").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone1").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone1").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone1").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone2").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone2").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone2").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone2").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone2").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone2").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone3").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone3").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone3").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone3").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone3").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone3").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone4").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone4").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone4").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone4").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone4").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone4").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone5").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone5").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone5").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone5").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone5").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone5").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone6").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone6").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone6").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone6").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone6").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone6").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone7").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone7").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone7").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone7").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone7").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone7").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone8").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone8").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone8").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone8").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone8").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone8").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone9").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone9").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone9").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone9").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone9").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone9").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone10").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone10").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone10").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone10").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone10").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone10").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone11").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone11").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone11").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone11").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone11").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone11").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone12").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone12").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone12").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone12").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone12").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone12").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone13").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone13").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone13").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone13").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone13").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone13").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone14").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone14").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone14").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone14").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone14").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone14").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone15").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone15").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone15").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone15").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone15").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone15").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone16").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone16").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone16").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone16").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone16").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone16").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone17").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone17").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone17").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone17").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone17").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone17").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone18").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone18").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone18").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone18").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone18").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone18").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone19").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone19").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone19").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone19").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone19").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone19").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone20").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone20").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone20").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone20").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone20").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone20").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone21").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone21").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone21").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone21").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone21").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone21").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone22").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone22").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone22").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone22").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone22").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone22").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone23").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone23").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone23").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone23").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone23").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone23").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone24").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone24").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone24").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone24").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone24").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone24").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone25").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone25").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone25").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone25").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone25").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone25").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone26").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone26").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone26").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone26").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone26").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone26").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#stone27").click(function(){
+				random=Math.floor(Math.random()*rock.length);
+					nahodka=rock[random]
+				lives=lives-20;
+				if (nahodka=="0"){
+					$("#stone27").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#stone27").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#stone27").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#stone27").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#stone27").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+40;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			var bedstone=["0","0","0","0","1","2","3","4","5","easter_egg","0","0","0","0","0","0","1","2","3","4","5"]
+			$("#bedrock").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#bedrock1").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock1").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock1").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock1").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock1").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock1").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock1").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock1").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#bedrock2").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock2").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock2").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock2").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock2").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock2").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock2").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock2").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#bedrock3").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock3").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock3").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock3").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock3").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock3").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock3").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock3").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#bedrock4").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock4").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock4").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock4").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock4").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock4").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock4").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock4").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#bedrock5").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock5").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock5").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock5").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock5").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock5").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock5").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock5").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			$("#bedrock6").click(function(){
+				random=Math.floor(Math.random()*bedstone.length);
+					nahodka=bedstone[random]
+				lives=lives-50;
+				if (nahodka=="0"){
+					$("#bedrock6").replaceWith("<img src='dirt/transparent.PNG' width='240px' height='240px'/>");
+				}
+				else if (nahodka=="1"){
+					$("#bedrock6").replaceWith("<img src='items/many_coins.PNG' width='240px' height='240px'/>");
+					cash=cash+10;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="2"){
+					$("#bedrock6").replaceWith("<img src='items/coins.GIF' width='240px' height='240px'/>");
+					cash=cash+25;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="3"){
+					$("#bedrock6").replaceWith("<img src='items/diamond.PNG' width='240px' height='240px'/>");
+					cash=cash+75;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="4"){
+					$("#bedrock6").replaceWith("<img src='items/fall.GIF' width='240px' height='240px'/>");
+					cash=cash+200;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="easter_egg"){
+					$("#bedrock6").replaceWith("<img src='items/easter.GIF' width='240px' height='240px'/>");
+					cash=cash+777;
+					lives=100;
+					$("#cash").text(cash);
+				}
+				else if (nahodka=="5"){
+					$("#bedrock6").replaceWith("<img src='dirt/heart.PNG' width='240px' height='240px'/>");
+					lives=lives+100;
+					if (lives>100){
+						lives=100;
+						$("#live").text(lives+"/100")
+					};
+				};
+				
+				
+				$("#live").text(lives+"/100")
+				if (lives<=0){
+					alert("вы проиграли")
+					window.location.reload(true);
+				};
+			});
+			//Конец копания
+			//Кость
+			var score=0
+			var tryes=0;
+			var summa="";
+			$("#dice").click(function(){
+				if (tryes<=3){
+					summa=prompt("Какое число выпадет из 4 гранного кубика")
+					score=Math.ceil(Math.random()*3);
+					if (summa==score){
+						alert("Вам повезло!");
+						lives=lives+25
+						tryes++;
+						if (lives>100){
+							lives=100;
+							};
+						$("#live").text(lives+"/100")
+					}
+					else if (summa!=score && summa<=4&&summa!=0){
+						alert("Удача не навашей стороне");
+						tryes++;
+					}
+					else if (summa===null||summa>4||summa==0){
+						alert("Попробуйте ещё раз");
+					};
+				}
+				if (tryes<=6&&tryes>3){
+					summa=prompt("Какое число выпадет из 6 гранного кубика")
+					score=Math.ceil(Math.random()*6);
+					if (summa==score){
+						alert("Вам повезло!");
+						lives=lives+25
+						tryes++;
+						if (lives>100){
+							lives=100;
+							};
+						$("#live").text(lives+"/100")
+					}
+					else if (summa!=score && summa<=6&&summa!=0){
+						alert("Удача не навашей стороне");
+						tryes++;
+					}
+					else if (summa===null||summa>6||summa==0){
+						alert("Попробуйте ещё раз");
+					};
+				}
+				if (tryes<=9&&tryes>6){
+					summa=prompt("Какое число выпадет из 12 гранного кубика")
+					score=Math.ceil(Math.random()*12);
+					if (summa==score){
+						alert("Вам повезло!");
+						lives=lives+25
+						tryes++;
+						if (lives>100){
+							lives=100;
+							};
+						$("#live").text(lives+"/100")
+					}
+					else if (summa!=score && summa<=12&&summa!=0){
+						alert("Удача не навашей стороне");
+						tryes++;
+					}
+					else if (summa===null||summa>12||summa==0){
+						alert("Попробуйте ещё раз");
+					};
+				}
+				if (tryes>9){
+					summa=prompt("Какое число выпадет из 20 гранного кубика")
+					score=Math.ceil(Math.random()*20);
+					if (summa==score){
+						alert("Вам повезло!");
+						lives=lives+25
+						tryes++;
+						if (lives>100){
+							lives=100;
+							};
+						$("#live").text(lives+"/100")
+					}
+					else if (summa!=score && summa<=20&&summa!=0){
+						alert("Удача не навашей стороне");
+						tryes++;
+					}
+					else if (summa===null||summa>20||summa==0){
+						alert("Попробуйте ещё раз");
+					};
+				}
+			});
+			
+			//Конец кость
+			//	магазин
+			$("#ducTape").click(function(){
+				if (cash<25){
+					alert("Нету денег!")
+					return;
+				}
+				else if (cash=>25&&lives<100){
+					cash=cash-25;
+					lives=lives+50;
+					if (lives>100){
+						lives=100
+					};
+					$("#cash").text(cash);
+					$("#live").text(lives+"/100")
+				};
+			});
+			//конец магазина
+		</script>
+	</body>
+</html>
